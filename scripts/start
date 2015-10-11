@@ -3,13 +3,13 @@
 # docker-minecraft /start script
 #
 # Authors: Isaac Bythewood
-# Updated: Dec 14th, 2014
+# Updated: Oct 11th, 2015
 # -----------------------------------------------------------------------------
 
 
 if [ ! -f /data/minecraft_server.jar ]
 then
-    curl "https://s3.amazonaws.com/Minecraft.Download/versions/1.8.3/minecraft_server.1.8.3.jar" -o /data/minecraft_server.jar
+    curl "https://s3.amazonaws.com/Minecraft.Download/versions/1.8.8/minecraft_server.1.8.8.jar" -o /data/minecraft_server.jar
 fi
 
 if [ ! -f /data/eula.txt ]
@@ -18,4 +18,3 @@ then
 fi
 
 cd /data/; java -Xmx2G -jar minecraft_server.jar nogui
-
